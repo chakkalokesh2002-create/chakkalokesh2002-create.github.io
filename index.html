@@ -2,45 +2,120 @@
 <html>
 <head>
     <title>Lokesh Portfolio</title>
+
     <style>
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
             font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: #111;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #1cc88a;
+        }
+
+        /* Sections */
+        section {
+            height: 100vh;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        #home {
             background: linear-gradient(to right, #4e73df, #1cc88a);
             color: white;
-            text-align: center;
-            padding-top: 100px;
         }
+
+        #about {
+            background: white;
+        }
+
+        #skills {
+            background: #f8f9fc;
+        }
+
+        #contact {
+            background: #e2e6ea;
+        }
+
         h1 {
-            font-size: 50px;
+            font-size: 40px;
+            margin-bottom: 20px;
         }
+
         p {
-            font-size: 20px;
-        }
-        button {
-            padding: 10px 20px;
+            max-width: 600px;
+            margin: auto;
             font-size: 18px;
-            background-color: white;
-            color: black;
+            line-height: 1.6;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: black;
+            color: white;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
         }
-        button:hover {
-            background-color: #f8f9fc;
+
+        .btn:hover {
+            background: #333;
         }
     </style>
 </head>
+
 <body>
 
-    <h1>Welcome to My Website 🚀</h1>
-    <p>Hi, I'm Lokesh. This is my first website deployed using GitHub Pages.</p>
-    <button onclick="showMessage()">Click Me</button>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <script>
-        function showMessage() {
-            alert("Website successfully deployed on GitHub Pages!");
-        }
-    </script>
+    <section id="home">
+        <h1>Hi, I'm Lokesh 👋</h1>
+        <p>A passionate developer building clean and modern web experiences.</p>
+        <button class="btn">View My Work</button>
+    </section>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <p>I am a web development enthusiast learning HTML, CSS, JavaScript and building real-world projects. I focus on writing clean, structured, and efficient code.</p>
+    </section>
+
+    <section id="skills">
+        <h1>My Skills</h1>
+        <p>HTML • CSS • JavaScript • Git • GitHub • SQL</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>Email: yourname@email.com</p>
+    </section>
 
 </body>
 </html>
