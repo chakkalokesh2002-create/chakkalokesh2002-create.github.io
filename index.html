@@ -1,121 +1,249 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Lokesh Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lokesh | Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            font-family: Arial, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        body {
-            background: #f4f6f9;
-        }
+body{
+    background:#0f172a;
+    color:#e2e8f0;
+}
 
-        /* Navbar */
-        nav {
-            position: fixed;
-            width: 100%;
-            background: #111;
-            padding: 15px 0;
-            text-align: center;
-        }
+/* Container */
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-        }
+/* Navbar */
+nav{
+    position:fixed;
+    width:100%;
+    background:#0f172a;
+    padding:20px 0;
+    z-index:1000;
+    border-bottom:1px solid #1e293b;
+}
 
-        nav a:hover {
-            color: #1cc88a;
-        }
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
 
-        /* Sections */
-        section {
-            height: 100vh;
-            padding: 100px 20px;
-            text-align: center;
-        }
+nav a{
+    color:#94a3b8;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
 
-        #home {
-            background: linear-gradient(to right, #4e73df, #1cc88a);
-            color: white;
-        }
+nav a:hover{
+    color:#38bdf8;
+}
 
-        #about {
-            background: white;
-        }
+/* Sections */
+section{
+    padding:120px 0;
+}
 
-        #skills {
-            background: #f8f9fc;
-        }
+/* Hero */
+#home{
+    background:linear-gradient(135deg,#1e293b,#0f172a);
+    text-align:center;
+}
 
-        #contact {
-            background: #e2e6ea;
-        }
+#home h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
+#home p{
+    font-size:18px;
+    color:#94a3b8;
+    margin-bottom:30px;
+}
 
-        p {
-            max-width: 600px;
-            margin: auto;
-            font-size: 18px;
-            line-height: 1.6;
-        }
+.btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:#38bdf8;
+    color:#0f172a;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:6px;
+    transition:0.3s;
+}
 
-        .btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: black;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+.btn:hover{
+    background:#0ea5e9;
+}
 
-        .btn:hover {
-            background: #333;
-        }
-    </style>
+/* About */
+#about p{
+    margin-top:20px;
+    line-height:1.7;
+    color:#94a3b8;
+}
+
+/* Skills */
+.skills-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:8px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
+    background:#334155;
+}
+
+/* Projects */
+.projects-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+    background:#334155;
+}
+
+.project-card h3{
+    margin-bottom:10px;
+}
+
+/* Contact */
+#contact p{
+    margin-top:15px;
+    color:#94a3b8;
+}
+
+#contact a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#0f172a;
+    border-top:1px solid #1e293b;
+    color:#64748b;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    #home h1{
+        font-size:32px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <section id="home">
+<section id="home">
+    <div class="container">
         <h1>Hi, I'm Lokesh 👋</h1>
         <p>A passionate developer building clean and modern web experiences.</p>
-        <button class="btn">View My Work</button>
-    </section>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+</section>
 
-    <section id="about">
+<section id="about">
+    <div class="container">
         <h1>About Me</h1>
-        <p>I am a web development enthusiast learning HTML, CSS, JavaScript and building real-world projects. I focus on writing clean, structured, and efficient code.</p>
-    </section>
+        <p>I am a web development enthusiast focused on building responsive and clean user interfaces. I enjoy solving problems and continuously improving my technical skills.</p>
+    </div>
+</section>
 
-    <section id="skills">
-        <h1>My Skills</h1>
-        <p>HTML • CSS • JavaScript • Git • GitHub • SQL</p>
-    </section>
+<section id="skills">
+    <div class="container">
+        <h1>Skills</h1>
+        <div class="skills-grid">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Git</div>
+            <div class="skill-card">GitHub</div>
+            <div class="skill-card">SQL</div>
+        </div>
+    </div>
+</section>
 
-    <section id="contact">
-        <h1>Contact Me</h1>
-        <p>Email: yourname@email.com</p>
-    </section>
+<section id="projects">
+    <div class="container">
+        <h1>Projects</h1>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Face-to-BMI Prediction</h3>
+                <p>Deep learning project using OpenCV and ResNet50 to predict BMI from facial images.</p>
+            </div>
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Responsive portfolio deployed using GitHub Pages.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h1>Contact</h1>
+        <p>Email: chakkalokesh01@email.com</p>
+        <p>LinkedIn: 
+            <a href="https://www.linkedin.com/in/chakka-lokesh-0a43812b3" target="_blank">
+                Visit Profile
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Lokesh. All rights reserved.
+</footer>
 
 </body>
 </html>
